@@ -17,7 +17,7 @@ Supports light and dark themes, responsive design with mobile menu, tables with 
 2. Go to the project folder:
 
    ```bash
-   cd unlime
+   cd unilime
 
    ```
 
@@ -36,13 +36,24 @@ Supports light and dark themes, responsive design with mobile menu, tables with 
 
 ## Project structure
 
-- **src/** —
-- **components/** — components
-- **pages/** — application pages
-- **routes/** — route configuration file
-- **styles/** — themes and global styles
-- **App.tsx** — main component with partitioning and routing
-- **index.tsx** — application entry point
+- **src/** - application source code
+  - **components/** — components
+  - **pages/** — application pages
+  - **routes/** — route configuration file
+  - **styles/** — themes and global styles
+  - **App.tsx** — main component with partitioning and routing
+  - **index.tsx** — application entry point
+
+## State management
+
+React-hooks (useState) are used for state management.
+In particular, theme state (light/dark), opening/closing mobile menu, table sorting are all local states.
+
+## Component structure and reusability
+
+- Props are used to transmit data and control behavior.
+- Components like MetricCard or custom Input can be used in different places, which reduces code duplication.
+- Styles are set via MUI sx or theme, which simplifies customization.
 
 # React + TypeScript + Vite
 
